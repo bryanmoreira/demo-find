@@ -59,4 +59,12 @@ class User extends Authenticatable
             ->map(fn ($word) => Str::substr($word, 0, 1))
             ->implode('');
     }
+
+    /**
+     * Companies that belong to the user.
+     */
+    public function companies()
+    {
+        return $this->belongsToMany(\App\Models\Company::class);
+    }
 }

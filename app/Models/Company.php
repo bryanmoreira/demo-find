@@ -14,4 +14,12 @@ class Company extends Model
         'website',
         'telephone'
     ];
+
+    /**
+     * Users that belong to the company.
+     */
+    public function users()
+    {
+        return $this->belongsToMany(\App\Models\User::class);
+    }
 }
