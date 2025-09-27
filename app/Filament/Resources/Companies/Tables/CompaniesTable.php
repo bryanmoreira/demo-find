@@ -7,6 +7,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\TextColumn;
+use Ysfkaya\FilamentPhoneInput\Tables\PhoneColumn;
 
 class CompaniesTable
 {
@@ -14,12 +15,23 @@ class CompaniesTable
     {
         return $table
             ->columns([
-                TextColumn::make('name')->label('Nome'),
-                TextColumn::make('cnpj')->label('CNPJ'),
-                TextColumn::make('address')->label('Endereço'),
-                TextColumn::make('email')->label('E-mail'),
-                TextColumn::make('website')->label('Website'),
-                TextColumn::make('telephone')->label('Telefone'),
+                TextColumn::make('name')
+                    ->label('Nome'),
+
+                TextColumn::make('cnpj')
+                    ->label('CNPJ'),
+
+                TextColumn::make('address')
+                    ->label('Endereço'),
+
+                TextColumn::make('email')
+                    ->label('E-mail'),
+
+                TextColumn::make('website')
+                    ->label('Website'),
+
+                PhoneColumn::make('telephone')
+                    ->label('Telefone'),
             ])
             ->filters([
                 //
