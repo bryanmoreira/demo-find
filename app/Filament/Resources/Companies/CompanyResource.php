@@ -22,7 +22,7 @@ class CompanyResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'Empresa';
 
-    protected static ?string $navigationLabel = 'Empresa';
+    protected static ?string $navigationLabel = 'Empresas';
 
     public static function form(Schema $schema): Schema
     {
