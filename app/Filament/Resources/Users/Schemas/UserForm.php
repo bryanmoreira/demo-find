@@ -22,6 +22,12 @@ class UserForm
                     ->email()
                     ->required(),
 
+                TextInput::make('password')
+                    ->label('Senha')
+                    ->password()
+                    ->required()
+                    ->visibleOn('create'),
+
                 Select::make('companies')
                     ->multiple()
                     ->label('Empresas')
