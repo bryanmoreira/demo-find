@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Filament\Panel;
+use App\Models\Company;
 use Illuminate\Support\Str;
 use Illuminate\Notifications\Notifiable;
 use Filament\Models\Contracts\FilamentUser;
@@ -64,7 +65,7 @@ class User extends Authenticatable implements FilamentUser
 
     public function companies()
     {
-        return $this->belongsToMany(\App\Models\Company::class);
+        return $this->belongsToMany(Company::class);
     }
 
     public function canAccessPanel(Panel $panel): bool
