@@ -22,4 +22,9 @@ class Company extends Model
     {
         return $this->belongsToMany(\App\Models\User::class);
     }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
